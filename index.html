@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jianli</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #409eff;
+            padding-bottom: 20px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 160px;
+            background: #eee;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #888;
+            background-size: cover;
+            background-position: center;
+            background-image: url("kttx.jpg");
+        }
+
+        .header-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .header-info h1 {
+            color: #2c3e50;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #409eff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #409eff;
+            padding-left: 10px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item h3 {
+            font-size: 17px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item p {
+            font-size: 15px;
+            color: #555;
+            margin-left: 5px;
+        }
+
+        ul {
+            margin-left: 20px;
+            color: #555;
+            font-size: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .item h3 {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部：左侧证件照 + 左侧个人信息 -->
+        <div class="header">
+            <div class="avatar"></div>
+            <div class="header-info">
+                <h1>舒先成</h1>
+                <div class="info">性别：男 | 年龄：22岁 | 居住地：贵州贵阳花溪区</div>
+                <div class="info">号码：15121366903 | 邮箱：xc161922@gmail.com</div>
+            </div>
+        </div>
+
+        <!-- 教育背景 -->
+        <div class="section">
+            <h2>教育背景</h2>
+            <div class="item">
+                <h3>贵阳人文科技学院 <span>2022.08 - 2026.06</span></h3>
+                <p>大数据与信息工程学院 | 计算机科学与技术 | 本科（全日制）</p>
+                <p>相关课程：C语言程序设计、数据结构、算法设计与分析、计算机组成原理、Web前端设计、Python程序设计、MySQL、Java程序设计</p>
+            </div>
+        </div>
+
+        <!-- 实习经历 -->
+        <div class="section">
+            <h2>实习经历</h2>
+            <div class="item">
+                <h3>贵州航天云网科技有限公司 - 后端开发 <span>2025.08</span></h3>
+                <p><strong>项目名称：</strong>MES生产执行管理系统</p>
+                <p><strong>项目介绍：</strong>系统采用Spring Boot + MyBatis + MySQL + Nacos微服务架构，基于企业级权限框架Sa-Token实现多租户与权限控制。</p>
+                <p><strong>项目职责：</strong>负责设备管理模块中的设备台账管理子系统，实现对设备启用、库存、安全库存等关键信息的统一管理与动态更新。</p>
+                <p><strong>项目成果：</strong>配合前端联调接口，修复测试BUG，确保模块稳定运行，接口稳定上线运行。</p>
+            </div>
+        </div>
+
+        <!-- 项目经历 -->
+        <div class="section">
+            <h2>项目经历</h2>
+            <div class="item">
+                <h3>电商后台管理与小程序购物系统（个人项目） <span>2025.05</span></h3>
+                <p>双端电商系统，涵盖商品、订单、用户、购物车、数据可视化等模块，实现从商品上架、用户下单到订单处理、数据分析的完整电商业务流程。</p>
+                <p>独立完成数据库表设计，基于JWT + Redis黑名单实现管理员与小程序用户的双套认证与权限隔离；设计订单状态机，并实现自动取消超时订单、库存联动扣减与恢复。</p>
+                <p>系统稳定交付，自动化订单处理机制提升业务效率；可视化看板支撑运营决策，权限模型保障系统安全。</p>
+                <p>技术栈：Spring Boot、MyBatis-Plus、MySQL、Redis、JWT、Vue 3、ECharts、TypeScript</p>
+            </div>
+            <div class="item">
+                <h3>B站数据采集与可视化分析（项目组长） <span>2025.04</span></h3>
+                <p>B站热门视频数据采集与分析系统，获取多维指标并可视化分析，为内容运营提供数据支持。</p>
+                <p>攻克B站API动态参数，设计反爬策略；使用Pandas进行清洗数据，实现多维度指标可视化图表。</p>
+                <p>成功采集200+视频，包含16个维度指标数据，输出分析报告揭示数据相关性，辅助内容策略优化。</p>
+                <p>技术栈：Python、Requests、Pandas、PyEcharts、Matplotlib</p>
+            </div>
+            <div class="item">
+                <h3>旅游攻略社交平台（个人项目） <span>2024.11</span></h3>
+                <p>基于前后端分离架构的旅游内容社区平台，支持攻略发布、互动、社交等功能，打造旅游爱好者分享交流生态。</p>
+                <p>独立完成数据库表设计，实现热门攻略多维度加权算法，结合时间衰减因子，并通过Redis缓存结果提升查询性能，采用Redis递增计数实现攻略浏览量统计，减少数据库更新压力。</p>
+                <p>系统稳定运行，查询响应时间从200ms降至50ms；模块化架构保障代码可维护性。</p>
+                <p>技术栈：Spring Boot、MyBatis-Plus、MySQL、Redis、JWT、Vue 3、TypeScript</p>
+            </div>
+        </div>
+
+        <!-- 个人技能 -->
+        <div class="section">
+            <h2>个人技能</h2>
+            <p style="font-size:15px;line-height:1.8;">
+                后端开发:熟练掌握Java及Spring、Spring MVC、Spring Boot、MyBatis、MyBatis-Plus等框架的应用。<br>
+                前端开发:掌握Vue 3、TypeScript、Echarts、Pinia等前端技术，实现组件化开发与状态管理。<br>
+                数据处理:熟悉Python，熟练使用Pandas进行数据清洗与处理，掌握PyEcharts实现数据可视化。<br>
+                数据库:熟悉MySQL数据库设计、SQL编写与事务管理，了解Redis在缓存、计数、状态存储的应用。<br>
+                工具:熟练使用IDEA、PyCharm、Navicat、VS Code、Git、postman。
+            </p>
+        </div>
+
+        <!-- 自我评价 -->
+        <div class="section">
+            <h2>自我评价</h2>
+            <p style="font-size:15px;line-height:1.8;">
+                技术素养:具备一定的计算机专业基础，熟悉Java开发技术与主流框架应用以及数据分析。<br>
+                项目管理:丰富的团队协作与项目管理经验，具备扎实的项目落地能力。<br>
+                技术态度:乐于钻研攻克技术难题，注重项目代码质量与系统稳定性。<br>
+                职业态度:责任心强，积极乐观，具备良好的抗压能力。
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.6s';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
